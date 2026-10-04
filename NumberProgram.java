@@ -9,10 +9,12 @@ public class NumberProgram {
     }
 
     public static int findResult(int[] values) {
-        int sum = 0;
+        int largest = 0;
         for (int value : values) {
-            sum += value;
+            if (value > largest) {
+                largest = value;
+            }
         }
-        return sum;
+        return largest;
     }
 }

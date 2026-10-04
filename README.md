@@ -28,16 +28,17 @@ Commit message:
 ## Iteration 2
 
 What changed:
--
+- The prompt asked for the largest integer, so the sum was replaced with a scan. largest starts at 0.
 
 What improved:
--
+- Positive values now work. testBasicArray expects 9 and testSingleValue expects 42.
 
 What still failed and why:
--
+- testNegativeNumbers still fails. Expected -1, but 0 is larger than every negative number, so the method returns 0.
+- testEmptyArray still fails. An empty array never updates largest, so it returns 0 instead of Integer.MIN_VALUE.
 
 Commit message:
--
+- Iteration 2: largest value implementation
 
 ---
 
