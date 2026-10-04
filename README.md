@@ -45,21 +45,26 @@ Commit message:
 ## Iteration 3
 
 Final behavior:
--
+- findResult returns the largest value in the array. An empty array returns Integer.MIN_VALUE.
 
 What was fixed:
--
+- The empty-array case, and starting from the first element so a negative maximum is not lost.
 
 What you learned:
--
+- A short prompt leaves the model guessing. The tests are the spec. Starting the maximum at 0 is wrong when every value is negative.
 
 Commit message:
--
+- Iteration 3: final version passing all tests
 
 ---
 
 ## Final Reflection
 
 - How did AI responses change across prompts?
+- The first prompt had no behavior, so the code summed the array. The second asked for the largest value, but still started at 0. The third added the empty-array rule, which is what the tests required.
+
 - How did testing affect your changes?
+- The starter run showed expected 9, -1, 42, and Integer.MIN_VALUE. That is what made the zero-start bug and the empty-array bug visible.
+
 - What did version control help you understand?
+- Each commit kept one prompt's result. The wrong sum and the zero-start version are still in the history instead of being overwritten.
